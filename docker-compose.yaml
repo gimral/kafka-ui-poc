@@ -98,5 +98,9 @@ services:
             KAFKA_PROTOBUF_ENABLED: 'true'
             KAFKA_PROTOBUF_SCHEMAREGISTRY_ENABLED: 'true'
             KAFKA_PROTOBUF_SCHEMAREGISTRY_URLS: http://schema-registry:8081
+            OWL_TOPICDOCUMENTATION_ENABLED: 'true'
+            OWL_TOPICDOCUMENTATION_GIT_ENABLED: 'true'
+            OWL_TOPICDOCUMENTATION_GIT_REPOSITORY_URL: https://github.com/gimral/kafka-ui.git
+            OWL_TOPICDOCUMENTATION_GIT_REPOSITORY_BRANCH: master
         ports:
             - 8094:8080

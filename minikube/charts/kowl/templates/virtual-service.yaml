@@ -1,0 +1,17 @@
+{{- if .Values.istio.enabled }}
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: {{ include "kowl.fullname" . }}-ingress
+spec:
+  hosts: 
+  - 'kowl.test.local'
+  gateways:
+  - kafka-gateway
+  http:
+  - route:
+    - destination:
+        host: {{ include "kowl.fullname" . }}
+        port:
+          number: {{ .Values.service.port }}
+{{- end }}
