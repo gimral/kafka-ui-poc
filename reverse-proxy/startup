@@ -1,0 +1,6 @@
+#!/bin/sh
+set -e
+
+htpasswd -cbB /usr/local/apache2/conf/passwd ${USER_NAME} ${PASSWORD}
+
+httpd-foreground
